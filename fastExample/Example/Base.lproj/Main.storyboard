@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="H1D-2H-5eq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="sLm-UE-UPh">
+            <objects>
+                <tableViewController id="H1D-2H-5eq" customClass="YYTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9YP-3f-eft">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="8yI-28-tXr">
+                            <rect key="frame" x="0.0" y="106" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mCD-nV-pLJ">
+                                    <rect key="frame" x="150" y="12" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="mCD-nV-pLJ" secondAttribute="centerY" id="0bH-6A-onE"/>
+                                <constraint firstAttribute="centerX" secondItem="mCD-nV-pLJ" secondAttribute="centerX" id="R9Y-y8-qxM"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="84" id="etX-EK-bY1" customClass="YYCommentCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="etX-EK-bY1" id="ZGy-oc-jgJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tr0-Jf-2ty">
+                                            <rect key="frame" x="10" y="17" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="oVi-I9-D5s"/>
+                                                <constraint firstAttribute="width" constant="50" id="rLe-xp-B4b"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-Nu-qe3">
+                                            <rect key="frame" x="70" y="10" width="240" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="MzZ-vN-gd5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipisicing" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="hyq-fz-UsS">
+                                            <rect key="frame" x="70" y="31" width="240" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tr0-Jf-2ty" secondAttribute="bottom" priority="999" constant="10" id="GlR-Re-bO3"/>
+                                        <constraint firstItem="hyq-fz-UsS" firstAttribute="top" secondItem="Vob-Nu-qe3" secondAttribute="bottom" id="IDY-VU-Ohb"/>
+                                        <constraint firstItem="Vob-Nu-qe3" firstAttribute="top" secondItem="ZGy-oc-jgJ" secondAttribute="top" constant="10" id="Mwk-Z6-Ifp"/>
+                                        <constraint firstItem="hyq-fz-UsS" firstAttribute="leading" secondItem="Tr0-Jf-2ty" secondAttribute="trailing" constant="10" id="S3y-Ic-WgV"/>
+                                        <constraint firstItem="Tr0-Jf-2ty" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZGy-oc-jgJ" secondAttribute="top" constant="10" id="Srn-EG-UeG"/>
+                                        <constraint firstItem="Tr0-Jf-2ty" firstAttribute="leading" secondItem="ZGy-oc-jgJ" secondAttribute="leading" constant="10" id="YMe-hk-dFv"/>
+                                        <constraint firstAttribute="centerY" secondItem="Tr0-Jf-2ty" secondAttribute="centerY" id="YwF-we-m83"/>
+                                        <constraint firstItem="Vob-Nu-qe3" firstAttribute="leading" secondItem="Tr0-Jf-2ty" secondAttribute="trailing" constant="10" id="ZpS-zf-Ofa"/>
+                                        <constraint firstAttribute="trailing" secondItem="hyq-fz-UsS" secondAttribute="trailing" constant="10" id="ol2-rw-9oi"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vob-Nu-qe3" secondAttribute="trailing" constant="10" id="uoE-Tq-xDy"/>
+                                        <constraint firstAttribute="bottom" secondItem="hyq-fz-UsS" secondAttribute="bottom" constant="10" id="wb5-xr-tjF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentText" destination="hyq-fz-UsS" id="frr-BS-vKB"/>
+                                    <outlet property="icon" destination="Tr0-Jf-2ty" id="p1P-wj-gtr"/>
+                                    <outlet property="name" destination="Vob-Nu-qe3" id="dAe-we-0Qa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H1D-2H-5eq" id="Yex-QF-jTH"/>
+                            <outlet property="delegate" destination="H1D-2H-5eq" id="Wuo-Dc-yvl"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="indicator" destination="mCD-nV-pLJ" id="7pH-Me-eCd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D10-iK-Uc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="7"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

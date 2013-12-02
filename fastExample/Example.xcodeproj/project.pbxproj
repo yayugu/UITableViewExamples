@@ -20,6 +20,11 @@
 		478BC209184C449A00670857 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478BC1E8184C449A00670857 /* UIKit.framework */; };
 		478BC211184C449A00670857 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 478BC20F184C449A00670857 /* InfoPlist.strings */; };
 		478BC213184C449A00670857 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC212184C449A00670857 /* ExampleTests.m */; };
+		478BC223184C58D500670857 /* YYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC222184C58D500670857 /* YYTableViewController.m */; };
+		478BC226184C59AF00670857 /* YYCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC225184C59AF00670857 /* YYCommentCell.m */; };
+		478BC229184DC00100670857 /* YYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC228184DC00100670857 /* YYComment.m */; };
+		478BC22C184DC44B00670857 /* YYCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC22B184DC44B00670857 /* YYCommentList.m */; };
+		47B5E82A184DD54500C94E84 /* YYImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E829184DD54500C94E84 /* YYImageLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,16 @@
 		478BC20E184C449A00670857 /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		478BC210184C449A00670857 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		478BC212184C449A00670857 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
+		478BC221184C58D500670857 /* YYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYTableViewController.h; path = ViewControllers/YYTableViewController.h; sourceTree = "<group>"; };
+		478BC222184C58D500670857 /* YYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYTableViewController.m; path = ViewControllers/YYTableViewController.m; sourceTree = "<group>"; };
+		478BC224184C59AF00670857 /* YYCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYCommentCell.h; path = Views/YYCommentCell.h; sourceTree = "<group>"; };
+		478BC225184C59AF00670857 /* YYCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYCommentCell.m; path = Views/YYCommentCell.m; sourceTree = "<group>"; };
+		478BC227184DC00100670857 /* YYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYComment.h; path = Models/YYComment.h; sourceTree = "<group>"; };
+		478BC228184DC00100670857 /* YYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYComment.m; path = Models/YYComment.m; sourceTree = "<group>"; };
+		478BC22A184DC44B00670857 /* YYCommentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYCommentList.h; path = Models/YYCommentList.h; sourceTree = "<group>"; };
+		478BC22B184DC44B00670857 /* YYCommentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYCommentList.m; path = Models/YYCommentList.m; sourceTree = "<group>"; };
+		47B5E828184DD54500C94E84 /* YYImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageLoader.h; sourceTree = "<group>"; };
+		47B5E829184DD54500C94E84 /* YYImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +128,11 @@
 				478BC1F4184C449A00670857 /* YYAppDelegate.m */,
 				478BC1F6184C449A00670857 /* Main.storyboard */,
 				478BC1FF184C449A00670857 /* Images.xcassets */,
+				478BC21D184C583F00670857 /* Models */,
+				478BC21C184C583600670857 /* Views */,
+				478BC220184C589D00670857 /* ViewControllers */,
+				478BC21E184C585400670857 /* Classes */,
+				478BC21F184C586B00670857 /* Resources */,
 				478BC1EB184C449A00670857 /* Supporting Files */,
 			);
 			path = Example;
@@ -145,6 +165,51 @@
 				478BC20F184C449A00670857 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		478BC21C184C583600670857 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				478BC224184C59AF00670857 /* YYCommentCell.h */,
+				478BC225184C59AF00670857 /* YYCommentCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		478BC21D184C583F00670857 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				478BC227184DC00100670857 /* YYComment.h */,
+				478BC228184DC00100670857 /* YYComment.m */,
+				478BC22A184DC44B00670857 /* YYCommentList.h */,
+				478BC22B184DC44B00670857 /* YYCommentList.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		478BC21E184C585400670857 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47B5E828184DD54500C94E84 /* YYImageLoader.h */,
+				47B5E829184DD54500C94E84 /* YYImageLoader.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		478BC21F184C586B00670857 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		478BC220184C589D00670857 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				478BC221184C58D500670857 /* YYTableViewController.h */,
+				478BC222184C58D500670857 /* YYTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +260,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Yuya Yaguchi";
 				TargetAttributes = {
+					478BC1E0184C449A00670857 = {
+						DevelopmentTeam = XVG97NLJ56;
+					};
 					478BC204184C449A00670857 = {
 						TestTargetID = 478BC1E0184C449A00670857;
 					};
@@ -246,7 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				478BC1F5184C449A00670857 /* YYAppDelegate.m in Sources */,
+				47B5E82A184DD54500C94E84 /* YYImageLoader.m in Sources */,
+				478BC229184DC00100670857 /* YYComment.m in Sources */,
+				478BC223184C58D500670857 /* YYTableViewController.m in Sources */,
+				478BC22C184DC44B00670857 /* YYCommentList.m in Sources */,
 				478BC1F1184C449A00670857 /* main.m in Sources */,
+				478BC226184C59AF00670857 /* YYCommentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +448,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,10 +464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +536,7 @@
 				478BC218184C449A00670857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478BC219184C449A00670857 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +545,7 @@
 				478BC21B184C449A00670857 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

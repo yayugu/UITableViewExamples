@@ -10,7 +10,7 @@
 #import "YYCommentList.h"
 #import "YYCommentCell.h"
 
-@interface YYTableViewController ()
+@interface YYTableViewController () <YYCommentListDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (nonatomic, strong) YYCommentList *commentList;
@@ -23,8 +23,8 @@
 {
     [super viewDidLoad];
 
-    _commentList = [[YYCommentList alloc] initWithDelegate:nil];
-    [_commentList requestSynchronous];
+    _commentList = [[YYCommentList alloc] initWithDelegate:self];
+    [_commentList requestAsynchronous];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,10 +71,16 @@
 {
     CGFloat contentOffsetWidthWindow = self.tableView.contentOffset.y + self.tableView.bounds.size.height;
     BOOL leachToBottom = contentOffsetWidthWindow >= self.tableView.contentSize.height;
-    if (!leachToBottom) return;
-    [self.indicator startAnimating];
-    [self.commentList requestMoreSynchronous];
-    [self.indicator stopAnimating];
+    if (!leachToBottom || _commentList.loading) return;
+    [_indicator startAnimating];
+    [_commentList requestMoreAsynchronous];
+}
+
+#pragma mark - Comment List delegate
+
+- (void)commentListDidLoad
+{
+    [_indicator stopAnimating];
     [self.tableView reloadData];
 }
 

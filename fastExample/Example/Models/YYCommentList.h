@@ -18,6 +18,8 @@
 
 @interface YYCommentList : NSObject
 
+@property (nonatomic) BOOL loading;
+
 - (instancetype)initWithDelegate:(id<YYCommentListDelegate>)delegate;
 - (void)requestSynchronous;
 - (void)requestAsynchronous;

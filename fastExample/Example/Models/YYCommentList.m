@@ -24,6 +24,7 @@
     if (self) {
         _delegate = delegate;
         _comments = @[];
+        _loading = NO;
     }
     return self;
 }
@@ -37,7 +38,8 @@
 
 - (void)requestAsynchronous
 {
-
+    _loading = YES;
+    [self performSelector:@selector(requestAsynchronousDone) withObject:self afterDelay:1.0];
 }
 
 - (void)requestMoreSynchronous
@@ -47,7 +49,8 @@
 
 - (void)requestMoreAsynchronous
 {
-    
+    _loading = YES;
+    [self performSelector:@selector(requestMoreAsynchronousDone) withObject:self afterDelay:1.0];
 }
 
 - (NSUInteger)count
@@ -69,6 +72,21 @@
         [newComments addObject:[[YYComment alloc] init]];
     }
     _comments = newComments;
+}
+
+- (void)requestAsynchronousDone
+{
+    _comments = @[];
+    [self addComments];
+    [_delegate commentListDidLoad];
+    _loading = NO;
+}
+
+- (void)requestMoreAsynchronousDone
+{
+    [self addComments];
+    [_delegate commentListDidLoad];
+    _loading = NO;
 }
 
 @end

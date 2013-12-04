@@ -40,9 +40,12 @@ const static CGFloat YYCommentCellBottomPadding = 10.0;
 - (void)setComment:(YYComment *)comment
 {
     _comment = comment;
-    _icon.image = [YYImageLoader imageWithURL:comment.iconURL];
     _name.text = comment.name;
     _commentText.text = comment.text;
+    [YYImageLoader imageWithURL:comment.iconURL completion:^(UIImage *image, NSError *error) {
+        if (error) return;
+        _icon.image = image;
+    }];
 }
 
 - (CGFloat)height

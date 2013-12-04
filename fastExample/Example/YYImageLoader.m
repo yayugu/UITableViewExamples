@@ -10,13 +10,20 @@
 
 @implementation YYImageLoader
 
-+ (UIImage*)imageWithURL:(NSURL*)url
++ (void)imageWithURL:(NSURL*)url completion:(YYImageLoaderCompletion)completion
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLResponse *response = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-    UIImage *image = [UIImage imageWithData:data];
-    return image;
+    [NSURLConnection
+     sendAsynchronousRequest:request
+     queue:[NSOperationQueue mainQueue]
+     completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+         if (connectionError) {
+             completion(nil, connectionError);
+             return;
+         }
+         UIImage *image = [UIImage imageWithData:data];
+         completion(image, nil);
+     }];
 }
 
 @end

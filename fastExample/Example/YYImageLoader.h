@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^YYImageLoaderCompletion)(UIImage *image, NSError *error);
+
 @interface YYImageLoader : NSObject
 
-+ (UIImage*)imageWithURL:(NSURL*)url;
++ (void)imageWithURL:(NSURL*)url completion:(YYImageLoaderCompletion)completion;
 
 @end

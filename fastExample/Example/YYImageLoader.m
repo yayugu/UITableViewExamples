@@ -21,8 +21,13 @@
              completion(nil, connectionError);
              return;
          }
-         UIImage *image = [UIImage imageWithData:data];
-         completion(image, nil);
+         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+             __block UIImage *image = [UIImage imageWithData:data];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 completion(image, nil);
+                 return;
+             });
+         });
      }];
 }
 

@@ -26,6 +26,7 @@
 		478BC22C184DC44B00670857 /* YYCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC22B184DC44B00670857 /* YYCommentList.m */; };
 		47B5E82A184DD54500C94E84 /* YYImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E829184DD54500C94E84 /* YYImageLoader.m */; };
 		47B5E82D18519F0000C94E84 /* YYImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E82C18519F0000C94E84 /* YYImageProcessor.m */; };
+		47B5E8311851AD6200C94E84 /* YYCommentCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E8301851AD6200C94E84 /* YYCommentCellLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		47B5E829184DD54500C94E84 /* YYImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageLoader.m; sourceTree = "<group>"; };
 		47B5E82B18519F0000C94E84 /* YYImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageProcessor.h; path = Classes/YYImageProcessor.h; sourceTree = "<group>"; };
 		47B5E82C18519F0000C94E84 /* YYImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageProcessor.m; path = Classes/YYImageProcessor.m; sourceTree = "<group>"; };
+		47B5E82F1851AD6200C94E84 /* YYCommentCellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYCommentCellLayout.h; path = Layouts/YYCommentCellLayout.h; sourceTree = "<group>"; };
+		47B5E8301851AD6200C94E84 /* YYCommentCellLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYCommentCellLayout.m; path = Layouts/YYCommentCellLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 				478BC1F6184C449A00670857 /* Main.storyboard */,
 				478BC1FF184C449A00670857 /* Images.xcassets */,
 				478BC21D184C583F00670857 /* Models */,
+				47B5E82E1851AD2800C94E84 /* Layouts */,
 				478BC21C184C583600670857 /* Views */,
 				478BC220184C589D00670857 /* ViewControllers */,
 				478BC21E184C585400670857 /* Classes */,
@@ -215,6 +219,15 @@
 				478BC222184C58D500670857 /* YYTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		47B5E82E1851AD2800C94E84 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				47B5E82F1851AD6200C94E84 /* YYCommentCellLayout.h */,
+				47B5E8301851AD6200C94E84 /* YYCommentCellLayout.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +336,7 @@
 				47B5E82D18519F0000C94E84 /* YYImageProcessor.m in Sources */,
 				478BC229184DC00100670857 /* YYComment.m in Sources */,
 				478BC223184C58D500670857 /* YYTableViewController.m in Sources */,
+				47B5E8311851AD6200C94E84 /* YYCommentCellLayout.m in Sources */,
 				478BC22C184DC44B00670857 /* YYCommentList.m in Sources */,
 				478BC1F1184C449A00670857 /* main.m in Sources */,
 				478BC226184C59AF00670857 /* YYCommentCell.m in Sources */,

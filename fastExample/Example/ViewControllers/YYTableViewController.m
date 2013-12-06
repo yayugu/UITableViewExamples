@@ -9,6 +9,7 @@
 #import "YYTableViewController.h"
 #import "YYCommentList.h"
 #import "YYCommentCell.h"
+#import "YYCommentCellLayout.h"
 
 @interface YYTableViewController () <YYCommentListDelegate>
 
@@ -49,10 +50,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    YYCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.comment = [_commentList commentAtIndex:indexPath.row];
-    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height;
+    YYComment *comment = [_commentList commentAtIndex:indexPath.row];
+    return [[YYCommentCellLayout alloc] initWithComment:comment cellWidth:self.view.bounds.size.width].height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

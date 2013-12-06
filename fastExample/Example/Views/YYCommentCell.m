@@ -9,6 +9,7 @@
 #import "YYCommentCell.h"
 #import "YYComment.h"
 #import "YYImageLoader.h"
+#import "YYCommentCellLayout.h"
 
 const static CGFloat YYCommentCellBottomPadding = 10.0;
 
@@ -33,6 +34,10 @@ const static CGFloat YYCommentCellBottomPadding = 10.0;
 
 - (void)setComment:(YYComment *)comment
 {
+    YYCommentCellLayout *layout = [[YYCommentCellLayout alloc] initWithComment:comment cellWidth:self.bounds.size.width];
+    _name.frame = layout.nameRect;
+    _commentText.frame = layout.commentTextRect;
+    
     _comment = comment;
     _name.text = comment.name;
     _commentText.text = comment.text;

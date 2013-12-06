@@ -22,12 +22,6 @@ const static CGFloat YYCommentCellBottomPadding = 10.0;
 
 @implementation YYCommentCell
 
-- (void)awakeFromNib
-{
-    _icon.layer.borderWidth = 1.0;
-    _icon.layer.cornerRadius = 5.0;
-}
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -42,8 +36,11 @@ const static CGFloat YYCommentCellBottomPadding = 10.0;
     _comment = comment;
     _name.text = comment.name;
     _commentText.text = comment.text;
-    [YYImageLoader imageWithURL:comment.iconURL completion:^(UIImage *image, NSError *error) {
-        if (error) return;
+    
+    _icon.image = nil;
+    NSURL *url = comment.iconURL;
+    [YYImageLoader commentCellImageWithURL:url completion:^(UIImage *image, NSError *error) {
+        if (error || ![url isEqual:_comment.iconURL]) return;
         _icon.image = image;
     }];
 }

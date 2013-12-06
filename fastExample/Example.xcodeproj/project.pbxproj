@@ -25,6 +25,7 @@
 		478BC229184DC00100670857 /* YYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC228184DC00100670857 /* YYComment.m */; };
 		478BC22C184DC44B00670857 /* YYCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 478BC22B184DC44B00670857 /* YYCommentList.m */; };
 		47B5E82A184DD54500C94E84 /* YYImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E829184DD54500C94E84 /* YYImageLoader.m */; };
+		47B5E82D18519F0000C94E84 /* YYImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5E82C18519F0000C94E84 /* YYImageProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		478BC22B184DC44B00670857 /* YYCommentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYCommentList.m; path = Models/YYCommentList.m; sourceTree = "<group>"; };
 		47B5E828184DD54500C94E84 /* YYImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageLoader.h; sourceTree = "<group>"; };
 		47B5E829184DD54500C94E84 /* YYImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageLoader.m; sourceTree = "<group>"; };
+		47B5E82B18519F0000C94E84 /* YYImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYImageProcessor.h; path = Classes/YYImageProcessor.h; sourceTree = "<group>"; };
+		47B5E82C18519F0000C94E84 /* YYImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYImageProcessor.m; path = Classes/YYImageProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 			children = (
 				47B5E828184DD54500C94E84 /* YYImageLoader.h */,
 				47B5E829184DD54500C94E84 /* YYImageLoader.m */,
+				47B5E82B18519F0000C94E84 /* YYImageProcessor.h */,
+				47B5E82C18519F0000C94E84 /* YYImageProcessor.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				478BC1F5184C449A00670857 /* YYAppDelegate.m in Sources */,
 				47B5E82A184DD54500C94E84 /* YYImageLoader.m in Sources */,
+				47B5E82D18519F0000C94E84 /* YYImageProcessor.m in Sources */,
 				478BC229184DC00100670857 /* YYComment.m in Sources */,
 				478BC223184C58D500670857 /* YYTableViewController.m in Sources */,
 				478BC22C184DC44B00670857 /* YYCommentList.m in Sources */,

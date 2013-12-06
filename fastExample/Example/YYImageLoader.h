@@ -12,6 +12,6 @@ typedef void (^YYImageLoaderCompletion)(UIImage *image, NSError *error);
 
 @interface YYImageLoader : NSObject
 
-+ (void)imageWithURL:(NSURL*)url completion:(YYImageLoaderCompletion)completion;
++ (void)commentCellImageWithURL:(NSURL*)url completion:(YYImageLoaderCompletion)completion;
 
 @end
